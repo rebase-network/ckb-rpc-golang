@@ -17,13 +17,17 @@ export API_URL=http://1.0.0.1:8114
 
 # ChangeLog
 
+## v0.1.1
+
+- update version display
+
 ## v0.1
 
-- Support RPC Method:
-  gbt
-  tipheader
-  tipblocknumber
-  currentepoch
-  peers
-  localnodeinfo
-  txpoolinfo
+Support RPC Method:
+-  gbt
+- tipheader
+- tipblocknumber
+- currentepoch
+- peers
+- localnodeinfo
+- txpoolinfo

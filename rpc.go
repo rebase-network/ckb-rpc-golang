@@ -13,12 +13,14 @@ import (
 )
 
 var (
-	putf  = fmt.Printf
-	putln = fmt.Println
+	putf      = fmt.Printf
+	putln     = fmt.Println
+	gitHash   = ""
+	buildDate = ""
 )
 
 const (
-	VERSION string = "v0.1"
+	VERSION = "v0.1.1"
 )
 
 type Payload struct {
@@ -36,7 +38,7 @@ func main() {
 	flag.Parse()
 
 	if *ver {
-		putf("Ckb RPC Version: %s\n\n", VERSION)
+		putf("Ckb RPC Version: %s (%s %s)\n\n", VERSION, gitHash, buildDate)
 		os.Exit(0)
 	}
 
@@ -62,7 +64,7 @@ func main() {
 	case "txpoolinfo":
 		tx_pool_info()
 	default:
-		putf("Not Found `%s` method\n", *rpc)
+		putf("Not Found `%s` rpc method\n", *rpc)
 		os.Exit(0)
 	}
 
